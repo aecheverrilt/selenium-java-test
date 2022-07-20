@@ -13,11 +13,12 @@ This project was created as part of an automation test for Lean Tech and it uses
 
 ### Getting Started
 
-Use your preferred IDE (capable of running a Java project). Ecplise is recommended but others such as IntelliJ IDEA should work fine.
+* Use your preferred IDE (capable of running a Java project). Eclipse is recommended but others such as IntelliJ IDEA should work fine.
+
+* Configurations such as viewport size and wait times can be modified and are defined in the TestBase.java file.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * Java Installed on your OS
 
 ### Installation

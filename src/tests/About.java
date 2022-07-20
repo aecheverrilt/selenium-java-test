@@ -1,43 +1,36 @@
 package tests;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import pages.HomePage;
 import pages.ProductDetailPage;
 import pages.ResultsPage;
 
-class About extends TestBase{
+class About extends TestBase {
 
-	private WebDriver driver;
 	private HomePage homePage;
 	private ResultsPage resultsPage;
 	private ProductDetailPage productDetailPage;
-	
-	
-	@BeforeEach
-	public void setUp() {
-		driver = new ChromeDriver();
-		driver.get("https://www.amazon.in/");
+
+	@Test
+	public void aboutTest() throws InterruptedException {
 		homePage = new HomePage(driver);
 		resultsPage = new ResultsPage(driver);
 		productDetailPage = new ProductDetailPage(driver);
-	}
-   
-	@Test
-	public void about() {
+
 		homePage.clickHMenu();
+		Thread.sleep(2000);
 		homePage.clickTVSection();
-		//homePage.clickTelevisions();
+		Thread.sleep(2000);
+		homePage.clickTelevisions();
+		resultsPage.scrollToBrandsSection();
+		resultsPage.selectBrand("Samsung");
+		resultsPage.sortByHighToLow();
+		resultsPage.selectResultByIndex(1);
+		Assert.assertTrue(productDetailPage.aboutSectionIsDisplayed());
+		productDetailPage.printAboutSection();
+		
 	}
 
-	@AfterEach
-	public void tearDown() {
-		if(driver != null) {
-			driver.quit();
-		}
-	}
 }
