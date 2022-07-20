@@ -14,7 +14,6 @@ public class TestBase {
 	public final static String BASE_URL = "http://www.amazon.in";
 
 	protected WebDriver driver;
-	protected WebDriverWait wait;
 
 	@BeforeAll
 	public static void setUpClass() {

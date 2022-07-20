@@ -17,15 +17,17 @@ This project was created as part of an automation test for Lean Tech and it uses
 
 * Configurations such as viewport size and wait times can be modified and are defined in the TestBase.java file.
 
+
 ### Prerequisites
 
 * Java Installed on your OS
+
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/aecheverrilt/selenium-java-test
    ```
 2. Open the repo with your IDE
 
@@ -34,6 +36,17 @@ This project was created as part of an automation test for Lean Tech and it uses
 4. Change the path to the driver donwloaded from the previous step on the TestBase.java file
 
 5. Right click the About.java test file and run it as a JUnit Test
+
+
+### Possible Improvements
+
+* Abstracting shared components such as Navigation bar, Hamburger Menu, Footer,... to nested classes so that tests calls are cleaner
+
+* Connecting the project to a cloud hosted platform like SauceLabs
+
+* Implement parallel testing
+
+* Implement cross browser/OS testing
 
 
 ### License

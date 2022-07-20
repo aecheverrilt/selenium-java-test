@@ -20,9 +20,7 @@ class About extends TestBase {
 		productDetailPage = new ProductDetailPage(driver);
 
 		homePage.clickHMenu();
-		Thread.sleep(2000);
 		homePage.clickTVSection();
-		Thread.sleep(2000);
 		homePage.clickTelevisions();
 		resultsPage.scrollToBrandsSection();
 		resultsPage.selectBrand("Samsung");
@@ -30,7 +28,6 @@ class About extends TestBase {
 		resultsPage.selectResultByIndex(1);
 		Assert.assertTrue(productDetailPage.aboutSectionIsDisplayed());
 		productDetailPage.printAboutSection();
-		
 	}
 
 }
